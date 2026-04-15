@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portofolio Ferlin Ardiansyah">
-    <title>Ferlin Ardiansyah | Portofolio</title>
+    <meta name="description" content="Portofolio Ferlin Ardiansyah - Server Dev, Designer, Network">
+    <title>Ferlin Ardiansyah | Server Dev & Designer</title>
     <style>
         :root {
             --bg: #0a0a0a;
@@ -124,6 +124,16 @@
             color: var(--text);
         }
         
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent);
+            box-shadow: 0 0 30px rgba(77,166,255,0.5);
+            margin-bottom: 1rem;
+        }
+        
         header h1 {
             font-size: 3rem;
             margin-bottom: 0.5rem;
@@ -167,7 +177,6 @@
             border-radius: 16px;
         }
         
-        /* NAV PAKE SEKAT */
         nav .container {
             display: flex;
             justify-content: center;
@@ -340,8 +349,18 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--accent);
-            font-size: 3rem;
+            overflow: hidden;
+        }
+        
+        .project-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.4s;
+        }
+        
+        .project-card:hover .project-img img {
+            transform: scale(1.1);
         }
         
         [data-theme="light"] .project-img {
@@ -445,6 +464,7 @@
     <header>
         <button class="theme-toggle" onclick="toggleTheme()" aria-label="Ganti tema">🌙</button>
         <div class="container">
+            <img src="foto.jpg" alt="Ferlin Ardiansyah" class="profile-img">
             <h1>YINZ</h1>
             <p>Designer | Network Enthusiast | Minecraft Dev</p>
         </div>
@@ -512,7 +532,9 @@
             <h2>Proyek & <span>Pengalaman</span></h2>
             <div class="projects">
                 <div class="project-card glass">
-                    <div class="project-img">🎨</div>
+                    <div class="project-img">
+                        <img src="project-desain.jpg" alt="Contoh Desain Logo & Banner">
+                    </div>
                     <div class="project-info">
                         <h3>Desain Logo & Banner</h3>
                         <p>Bikin identitas visual buat brand, komunitas game, dan streamer. Fokus ke gaya modern & gaming.</p>
@@ -525,7 +547,9 @@
                 </div>
                 
                 <div class="project-card glass">
-                    <div class="project-img">🌐</div>
+                    <div class="project-img">
+                        <img src="project-cloudflare.jpg" alt="Setup Network & Cloudflare">
+                    </div>
                     <div class="project-info">
                         <h3>Setup Network & Cloudflare</h3>
                         <p>Konfigurasi DNS, domain, proxy, dan optimasi keamanan website pakai Cloudflare.</p>
@@ -538,7 +562,9 @@
                 </div>
                 
                 <div class="project-card glass">
-                    <div class="project-img">⛏️</div>
+                    <div class="project-img">
+                        <img src="project-mc.jpg" alt="Minecraft Java Server">
+                    </div>
                     <div class="project-info">
                         <h3>Minecraft Java Server Dev</h3>
                         <p>Develop & maintain server MC Java. Setup plugin, anti-cheat, custom gamemode, dan optimasi TPS.</p>
@@ -584,15 +610,4 @@
             const current = document.documentElement.getAttribute('data-theme');
             const newTheme = current === 'dark' ? 'light' : 'dark';
             
-            document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            updateToggleIcon(newTheme);
-        }
-        
-        function updateToggleIcon(theme) {
-            const btn = document.querySelector('.theme-toggle');
-            btn.textContent = theme === 'dark' ? '☀️' : '🌙';
-        }
-    </script>
-</body>
-</html>
+            document.documentElement.setAttribute('data-theme', newThem

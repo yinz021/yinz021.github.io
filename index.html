@@ -391,6 +391,7 @@
             border: 1px solid rgba(77, 166, 255, 0.3);
         }
         
+        /* KONTAK BALIK POLOS + GLASS AJA */
         #contact .container {
             border-radius: 16px;
             padding: 3rem 2rem;
@@ -421,16 +422,19 @@
             cursor: pointer;
         }
         
+        .contact-btn img {
+            width: 24px;
+            height: 24px;
+            border-radius: 6px;
+            object-fit: cover;
+        }
+        
         .contact-btn:hover {
             color: var(--accent);
             background: rgba(77, 166, 255, 0.15);
             transform: translateY(-3px);
             box-shadow: 0 8px 25px rgba(77, 166, 255, 0.4);
             text-shadow: 0 0 15px rgba(77, 166, 255, 0.6);
-        }
-        
-        .contact-btn span {
-            font-size: 1.5rem;
         }
         
         footer {
@@ -584,14 +588,17 @@
             <h2>Hubungi <span>Saya</span></h2>
             <p>Ada project desain, butuh setup domain, atau mau bikin server MC? Gas ngobrol!</p>
             <div class="contact-buttons">
-                <a href="https://www.instagram.com/ferlinardiansyahh?igsh=eXl0NGJ4aDBmbHk3" class="contact-btn" target="_blank">
-                    <span>📸</span> Instagram
-                </a>
                 <a href="https://wa.me/628xxxxxxxxxx" class="contact-btn" target="_blank">
-                    <span>💬</span> WhatsApp
+                    <img src="icon-wa.jpg" alt="WhatsApp">
+                    WhatsApp
+                </a>
+                <a href="https://www.instagram.com/ferlinardiansyahh?igsh=eXl0NGJ4aDBmbHk3" class="contact-btn" target="_blank">
+                    <img src="icon-ig.jpg" alt="Instagram">
+                    Instagram
                 </a>
                 <a href="https://discord.gg/invitecode" class="contact-btn" target="_blank">
-                    <span>🎮</span> Discord Community
+                    <img src="icon-dc.jpg" alt="Discord">
+                    Discord Community
                 </a>
             </div>
         </div>
@@ -606,8 +613,4 @@
         document.documentElement.setAttribute('data-theme', currentTheme);
         updateToggleIcon(currentTheme);
         
-        function toggleTheme() {
-            const current = document.documentElement.getAttribute('data-theme');
-            const newTheme = current === 'dark' ? 'light' : 'dark';
-            
-            document.documentElement.setAttribute('data-theme', newThem
+        fu
